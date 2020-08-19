@@ -6,20 +6,20 @@ void arrayJournay(int arr[], int k, int n){
     int i;
     int count=0;
     for(i=1;i<n;){
-            int m=arr[i];
+            int max=arr[i];
             pos=i;
             count=0;
         for(int j=1;j<k;j++){
                 if(i+j<n){
                 count++;
-                    if(arr[i+j]>m){
-                     m=arr[i+j];
+                    if(arr[i+j]>max){
+                     max=arr[i+j];
                      pos=i+j;
                 }
             }
         }
         if(count==k-1){
-            sum=sum+m;
+            sum=sum+max;
             }
         i=pos+1;
     }
